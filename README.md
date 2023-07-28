@@ -1,2 +1,0 @@
-# SimplePHPConsole
-Simple PHP console
