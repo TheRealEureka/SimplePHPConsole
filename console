@@ -36,6 +36,7 @@ if (isset($_SERVER['argv'])) {
       if(class_exists('Controllers\\Custom\\'.ucfirst($options['category']))) {
           $class = 'Controllers\\Custom\\' . ucfirst($options['category']);
           if(method_exists($class, 'handle')){
+              Controller::welcome();
               $class::handle($options['command'], $options['args']);
          }else{
                 Controller::logMessage("Invalid class, make sure that ".ucfirst($options['category'])."extends the controller.", true);
