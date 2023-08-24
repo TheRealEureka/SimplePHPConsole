@@ -3,7 +3,19 @@
 const CONTROLLER_PATH = 'Controllers/';
 const CUSTOM_PATH = CONTROLLER_PATH. 'Custom/';
 
+const WELCOME_MESSAGE = 'Welcome to my console !';
 
+const HELP_MESSAGE = <<<EOT
+Usage: php console [options] [arguments]
+available commands:
+    help : Display this help message
+    example:hello [--name=...]: Display hello message 
+[] : optional
+<> : required
+EOT;
+
+
+//START OF THE SCRIPT
 
 if(!is_file(CONTROLLER_PATH.'Controller.php')){
     echo 'Error : Missing Controller class.';

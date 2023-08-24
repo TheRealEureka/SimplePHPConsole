@@ -9,10 +9,7 @@ abstract class  Controller
 {
 
     public static function welcome(){
-        echo <<<EOT
-    Welcome to my console !                                                                                         
-EOT;
-        echo PHP_EOL;
+        echo WELCOME_MESSAGE.PHP_EOL;
     }
     /**
      * @throws Exception
@@ -29,10 +26,7 @@ EOT;
 
     public static function help()
     {
-        echo 'Available commands:' . PHP_EOL;
-        echo '  * help' . PHP_EOL;
-        echo '[] = optional' . PHP_EOL;
-
+        echo HELP_MESSAGE. PHP_EOL;
     }
 
     protected static function askUser(string $message): string
