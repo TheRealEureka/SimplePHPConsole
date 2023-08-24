@@ -53,6 +53,8 @@ if (isset($_SERVER['argv'])) {
          }else{
                 Controller::logMessage("Invalid class, make sure that ".ucfirst($options['category'])."extends the controller.", true);
           }
+      }elseif ($options['category'] === 'help'){
+          Controller::help();
       }else{
         Controller::logMessage("Invalid command, use 'php console help' ", true);
       }
